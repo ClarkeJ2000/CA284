@@ -1,0 +1,43 @@
+Strings are arrays of characters terminated by a NULL character ('\0')
+You do not need to place the NULL character at the end of strings as the C compiler usually does it for you.
+
+Example:
+You can write it like this
+char Helloworld[6] = {'H', 'e', 'l', 'l', 'o','\0'};
+which will print out the string "Hello"
+
+You can manipulate strings in C using many built in functions.
+Examples of these are:
+Strlen(): Checks the lenght of the string
+Strcpy(): Copies a string to another
+Strcat(): Concatenates(joins) two strings together
+StrLwr(): lowers characters in string
+StrUpr(): Puts characters in uppercase
+
+Storage
+Strings are stored in 2 different ways:
+1) Read only string
+When a string value is assigned to a pointer, its usually stored in a read-only block by the compiler, which is then shared among functions.
+
+Example:
+
+char *str = "Abba";
+
+the string "Abba" is stored in a read only block, but the pointer str is stored in a read-write memory block.
+
+2) Dynamically allocated in heap segments
+
+Strings can also be stored in dynamically allocated things and be shared among other functions.
+
+Example:
+
+
+char *str;
+int size = 4;
+str = (char *)malloc(sizeof(char)*size);
+*(str+0) = 'A'; 
+*(str+1) = 'b';  
+*(str+2) = 'b';  
+*(str+3) = 'a';  
+*(str+4) = '\0';
+

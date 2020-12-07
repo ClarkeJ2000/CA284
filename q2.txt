@@ -1,0 +1,10 @@
+1) ask user for input(numbers only)
+2) set max and min of input to 999 and -999
+3) store it in a variable eg. Num
+4) check each part of input using a for loop
+5) check lenght of input using strlen()
+6) whatever the lenght is divide by sutible number. eg if input == 4000, we divide by 1000.
+Store this in new variable eg. answer
+7) Move onto next number and do the same as step 6
+8) continue to do step 6 until you ar left with 0
+9)when 0 is encountered, print "zero" and end program using a return 0; statement

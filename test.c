@@ -1,16 +1,38 @@
-#include <stdio.h>
-int main(){
-	char s[100];
-	int i;
-	printf("Enter a string: ");
-	scanf("%s", s);
+#include<stdio.h> // include stdio.h library
+#include<string.h> // include stdio.h library
 
-	for (i=0; s[i] != '\0'; i++)
-	{
-		if(s[i] >= 65 && s[i] <= 90)
-			s[i] = s[i] + 32;
-		else if (s[i] >= 97 && s[i] <= 122)
-			s[i] = s[i] - 32;
-	}
-printf("Answer = %s\n", s);
+int main(void)
+{       
+
+    int len, i= 0, j, is_palindrome = 1;
+
+    char word[50];
+
+    printf("Enter a word: ");
+    scanf("%s", word);
+
+    j = strlen(word) - 1;  // get the last valid index
+
+    while(i <= j)
+    {
+        if (word[i] != word[j])
+        {
+            is_palindrome = 0;
+            break;
+        }
+
+        i++;  
+        j--;
+    }
+
+    if(is_palindrome)
+    {
+        printf("%s is palindrome", word);
+    }
+    else
+    {
+        printf("%s is not palindrome.\n", word);
+    }
+
+    return 0;
 }
